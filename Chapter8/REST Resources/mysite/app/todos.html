@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>ToDos - MySite</title>
+  <link rel="stylesheet"
+        href="//oss.maxcdn.com/bootstrap/3.3.4/css/bootstrap.css">
+</head>
+<body ng-controller="ToDosCtrl as ctrl">
+
+<nav class="navbar navbar-inverse">
+  <div class="navbar-header">
+    <a class="navbar-brand"
+       href="/">MySite</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li>
+      <a href="/todos.html">
+        ToDos
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<div id="content" class="container">
+  <h1>ToDos</h1>
+
+  <ul class="list-group col-md-6">
+    <li class="list-group-item" ng-repeat="todo in ctrl.todos">
+      <a href="#">{{ todo.title }}</a>
+    </li>
+  </ul>
+</div>
+
+<script src="//oss.maxcdn.com/angularjs/1.4.0/angular.js"></script>
+<script
+    src="//oss.maxcdn.com/angularjs/1.4.0/angular-resource.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

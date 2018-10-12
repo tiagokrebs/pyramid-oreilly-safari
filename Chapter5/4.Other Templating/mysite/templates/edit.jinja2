@@ -1,0 +1,14 @@
+{% extends "base.jinja2" %}
+{% block title %}ToDos Edit {% endblock %}
+{% block content %}
+
+    <h1>ToDos - Edit</h1>
+
+    <p><em>ToDo: {{ todo.id }}</em></p>
+
+    <form method="POST">
+        <input name="new_title" value="{{ todo.title }}"/>
+        <input type="submit"/>
+    </form>
+
+{% endblock %}

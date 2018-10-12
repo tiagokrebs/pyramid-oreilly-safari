@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %} - MySite</title>
+    <link rel="stylesheet"
+          href="//oss.maxcdn.com/bootstrap/3.3.4/css/bootstrap.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-header">
+        <a class="navbar-brand"
+           href="{{ request.route_url('list') }}">ToDos</a>
+    </div>
+</nav>
+
+<div id="content" class="container">
+  {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
